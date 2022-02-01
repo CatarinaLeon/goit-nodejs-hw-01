@@ -33,9 +33,12 @@ const removeContact = async (contactId) => {
 
 }
 
-const addContact = async(name, email, phone)=> {
+const addContact = async(id, name, email, phone)=> {
   const contacts = await listContacts();
-  // ...твой код
+  const data = {id, name, email, phone };
+  contacts.push(data);
+  await fs.writeFile(contactsPath, JSON.stringify(contacts, null, 2));
+  return data;
 }
 
 module.exports ={listContacts, getContactById, removeContact, addContact}

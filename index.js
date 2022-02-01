@@ -27,7 +27,8 @@ const invokeAction = async({ action, id, name, email, phone }) => {
             break;
 
         case 'add':
-            // ... name email phone
+            const newContact = await contactsOperations.addContact(id, name, email, phone);
+            console.table(newContact)
             break;
 
         case 'remove':
