@@ -1,5 +1,4 @@
 const { Command } = require('commander');
-const { listenerCount } = require("process");
 const contactsOperations = require("./contacts");
 
 const program = new Command();
