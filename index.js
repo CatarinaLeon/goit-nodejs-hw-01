@@ -15,28 +15,29 @@ const argv = program.opts();
 
 // TODO: рефакторить
 const invokeAction = async({ action, id, name, email, phone }) => {
-  switch (action) {
-    case 'list':
-          const contacts = await contactsOperations.listContacts();
-          console.table(contacts)
-      break;
+    switch (action) {
+        case 'list':
+            const contacts = await contactsOperations.listContacts();
+            console.table(contacts)
+            break;
 
-    case 'get':
-          const contact = await contactsOperations.getContactById(id);
-          console.table(contact);
-      break;
+        case 'get':
+            const contact = await contactsOperations.getContactById(id);
+            console.table(contact);
+            break;
 
-    case 'add':
-      // ... name email phone
-      break;
+        case 'add':
+            // ... name email phone
+            break;
 
-    case 'remove':
-      // ... id
-      break;
+        case 'remove':
+            const removeContacts = await contactsOperations.removeContact(id)
+            console.table(removeContacts)
+            break;
 
-    default:
-      console.warn('\x1B[31m Unknown action type!');
-  }
+        default:
+            console.warn('\x1B[31m Unknown action type!');
+    }
 }
 
 invokeAction(argv);

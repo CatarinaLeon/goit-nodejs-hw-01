@@ -1,5 +1,7 @@
 1. Получаем и выводим весь список контактов в виде таблицы (console.table)
-   http://joxi.ru/Q2KOjOGsyD4O02
+   https://ibb.co/RYnfqtq
 
-2. Получаем контакт по id
-   http://joxi.ru/MAjWRWZh1e4dbr
+2. Получаем контакт по id  
+   https://ibb.co/5Gp000s
+3. Удаляем контакт
+   https://ibb.co/N38fdKx
