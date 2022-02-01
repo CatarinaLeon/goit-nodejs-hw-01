@@ -22,11 +22,14 @@ const getContactById = async (contactId) => {
   return result;
 }
 
-function removeContact(contactId) {
-  // ...твой код
+const removeContact = async (contactId) => {
+  const contacts = await listContacts();
+
+
 }
 
-function addContact(name, email, phone) {
+const addContact = async(name, email, phone)=> {
+  const contacts = await listContacts();
   // ...твой код
 }
 
