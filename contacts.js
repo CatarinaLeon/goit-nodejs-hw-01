@@ -1,14 +1,8 @@
 const fs = require('fs/promises');
 const path = require('path');
 
-// contacts.js
-
-// Раскомментируй и запиши значение
-
 const contactsPath = path.join(__dirname, 'db/contacts.json');
 
-
-// TODO: задокументировать каждую функцию
 const listContacts = async () => {
   const data = await fs.readFile(contactsPath);
   const contacts = JSON.parse(data);
